@@ -46,53 +46,55 @@ if username == User:
                     #validity checks for student data
                     if ForeName.isalpha() == True:
                         if SurName.isalpha() == True:
-                            if DoB.isalpha() == False:
-                                if Gender.isalpha() == True:
-                                    if ID.isdigit() == True:
-                                        if Phone.isdigit() == True:
+                            DOBCheck = DoB.replace("/","")
+                            if DOBCheck.isdigit() == True:
+                                if len(DOBCheck) == 8:
+                                    if Gender.isalpha() == True:
+                                        if ID.isdigit() == True:
+                                            if Phone.isdigit() == True:
 
-                                            #concatenats descriptors onto the student data and appends them to the list
-                                            StudentInf.append("Forename: " +ForeName)
-                                            StudentInf.append("Surname: " +SurName)
-                                            StudentInf.append("Date of birth: " +DoB)
-                                            StudentInf.append("Gender: " +Gender)
-                                            StudentInf.append(" Student ID: " +ID)
-                                            StudentInf.append("Address: " +Address)
-                                            StudentInf.append("Phone number: " +Phone + "\n")
+                                                #concatenats descriptors onto the student data and appends them to the list
+                                                StudentInf.append("Forename: " +ForeName)
+                                                StudentInf.append("Surname: " +SurName)
+                                                StudentInf.append("Date of birth: " +DoB)
+                                                StudentInf.append("Gender: " +Gender)
+                                                StudentInf.append(" Student ID: " +ID)
+                                                StudentInf.append("Address: " +Address)
+                                                StudentInf.append("Phone number: " +Phone + "\n")
 
-                                            #appends the list to the file and closes it
-                                            x = 0
-                                            for i in range(len(StudentInf)):
-                                                file.write(StudentInf[x])
-                                                file.write(' ')
-                                                x += 1
+                                                #appends the list to the file and closes it
+                                                x = 0
+                                                for i in range(len(StudentInf)):
+                                                    file.write(StudentInf[x])
+                                                    file.write(' ')
+                                                    x += 1
 
-                                            file.close()
-
-
+                                                file.close()
 
 
-                    #messages for invalid data types
+
+
+                        #messages for invalid data types
+                                            else:
+                                                print("phone number is not only numbers, invalid")
+                                                EXIT = input("do you want to exit: yes or no? ")
+                                                print("\n")
+
+
                                         else:
-                                            print("phone number is not only numbers, invalid")
+                                            print("ID number is not only numbers, invalid")
                                             EXIT = input("do you want to exit: yes or no? ")
                                             print("\n")
 
 
-                                    else:
-                                        print("ID number is not only numbers, invalid")
-                                        EXIT = input("do you want to exit: yes or no? ")
-                                        print("\n")
-
-
                                 else:
-                                    print("gender contains numbers or symbols, invalid")
+                                    print("date of birth is not in the correct format")
                                     EXIT = input("do you want to exit: yes or no? ")
                                     print("\n")
 
 
                             else:
-                                print("date of birth contains letters, invalid")
+                                print("date of birth is not in the correct format")
                                 EXIT = input("do you want to exit: yes or no? ")
                                 print("\n")
 
