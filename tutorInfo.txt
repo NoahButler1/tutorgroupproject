@@ -1,0 +1,5 @@
+Forename: lee Surname: hughman Date of birth: 14/10/2001 Gender: male  Student ID: 1 Address: 12 street Phone number: 74389945
+ Forename: joe Surname: mama Date of birth: 3574 Gender: e  Student ID: 25456 Address: 65trgf Phone number: 464564
+ Forename: dfg Surname: dfg Date of birth: 45tg/ Gender: sd  Student ID: 45 Address: 54t Phone number: 345
+ Forename: dfg Surname: dfg Date of birth: //// Gender: dfg  Student ID: 436 Address: g44f Phone number: 435
+ 
